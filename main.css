@@ -131,14 +131,14 @@ footer a {
   color: rgb(0, 0, 0);
   cursor: default;
   width: 50px;
-  height: 30px;
+  height: 20px;
   border-radius: 20px;
   border: solid thin rgb(117, 0, 0);
   background-color: #300;
 }
 
 .center {
-  top: 70%;
+  top: 80%;
   left: 70%;
   transform: translateX(-50%) translateY(-50%);
 }
