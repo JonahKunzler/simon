@@ -3,113 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jonah's Version of Simon</title>
-    <link rel="icon" href="image.jpeg" />
+    <title>Simon (Jonah Version)</title>
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="main.css" />
+
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-    crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
     />
   </head>
   <body class="bg-dark text-light">
     <header class="container-fluid">
-      <h1>Simon<sup>&reg;</sup></h1>
-      <nav class="navbar fixed-top-right navbar-dark">
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">Simon (Jonah Version)<sup>&reg;</sup></a>
         <menu class="navbar-nav">
-          <li><a class href="index.html">Home</a></li>
-          <li><a class href="play.html">Play</a></li>
-          <li><a class href="scores.html">Stats</a></li>
-          <li><a class href="info.html">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="play.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="scores.html">Scores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Learn More</a>
+          </li>
         </menu>
       </nav>
-      <hr />
     </header>
 
-    <main>
-      <div class="Participants">
+    <main class="bg-secondary">
+      <div class="players">
         Player:
-        <span class="Name">Player</span>
+        <span class="player-name"></span>
       </div>
-      <br />
-
-      <div>
-        <label for="Stats">Points</label>
-        <input type="stuff" id="Stats" value="--" readonly />
-      </div>
-
-      <br />
-
-      <div>
-        <button>Start Again</button>
-      </div>
-
-      <br />
-
-      <div>
-        <table>
-          <tr>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 70 70"
-                  height="70"
-                  width="70"
-                >
-              
-                  <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 70 70"
-                  height="70"
-                  width="70"
-                >
-                  <path d="M5,5 5,95 95,95 Q 95,5 5,5" fill="red" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M95,5 5,5 5,95 Q 95,95 95,5" fill="yellow" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-        </table>
+      <div class="game">
+        <div class="button-container">
+          <button id="green" class="game-button button-top-left" onclick="game.pressButton(this)"></button>
+          <button id="red" class="game-button button-top-right" onclick="game.pressButton(this)"></button>
+          <button id="yellow" class="game-button button-bottom-left" onclick="game.pressButton(this)"></button>
+          <button id="blue" class="game-button button-bottom-right" onclick="game.pressButton(this)"></button>
+          <div class="controls center">
+            <div class="game-name">Simon<sup>&reg;</sup></div>
+            <div id="score" class="score center">--</div>
+            <button class="btn btn-primary" onclick="game.reset()">Reset</button>
+          </div>
+        </div>
       </div>
     </main>
 
-    <footer>
-      <hr />
-      <span class="More Info">Click on the link below for repository</span>
-      <br />
-      <a href="https://github.com/JonahKunzler/simon.git">GitHub</a>
+    <footer class="bg-dark text-dark text-muted">
+      <div class="container-fluid">
+        <a class="text-reset" href="https://github.com/JonahKunzler/simon">GitHub</a>
+      </div>
     </footer>
+
+    <script src="play.js"></script>
   </body>
 </html>

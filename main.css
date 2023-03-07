@@ -1,20 +1,26 @@
 body {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
+  min-width: 375px;
+  background: linear-gradient(to bottom right, #041183, #7370dd);
+  
 }
 
 header {
-  flex: 0 100px;
+  flex: 0 80px;
 }
 
 main {
   flex: 1 calc(100vh - 110px);
   display: flex;
   flex-direction: column;
-  align-items: right;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #041183, #7370dd);
+  background-size: cover;
+  background-position: center;
 }
+
 
 footer {
   flex: 0 30px;
@@ -23,17 +29,17 @@ footer {
 menu {
   flex: 1;
   display: flex;
-  flex-direction: column !important;
+  flex-direction: row !important;
   list-style: none;
 }
 
 .navbar-brand {
   padding-left: 0.3em;
-  border-bottom: solid rgb(182, 182, 182) thin;
+  border-bottom: solid rgb(0, 0, 0) thin;
 }
 
 menu .nav-item {
-  padding: 0 0.6em;
+  padding: 0 0.5em;
 }
 
 footer a {
@@ -41,35 +47,38 @@ footer a {
 }
 
 #count {
-  color: rgb(255, 0, 0);
+  color: rgb(135, 255, 116);
 }
 
 .players {
   flex: 1;
-  width: 75%;
-  padding: 0.8em;
+  width: 100%;
+  padding: 0.5em;
 }
 
 .player-name {
-  color: rgb(245, 237, 0);
+  color: rgb(118, 190, 210);
 }
 
 .game {
-  background: rgb(24, 4, 230);
+  background: linear-gradient(90deg, #2f3d4c 0%, #4f5b69 50%, #2f3d4c 100%);
   border-radius: 50%;
-  box-shadow: 0 0 20px 5px rgb(69, 69, 69);
-  width: 80vw;
-  height: 80vw;
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vw;
   position: absolute;
-  min-width: 300px;
-  min-height: 300px;
+  min-width: 350px;
+  min-height: 350px;
   max-width: min(80vmin, 1000px);
   max-height: min(80vmin, 1000px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-container {
-  width: 70%;
-  height: 50%;
+  width: 90%;
+  height: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -78,43 +87,49 @@ footer a {
 .button-top-left {
   border-radius: 100% 0 0 0;
   margin: 20px 0 0 20px;
-  background-color: green;
+  background-color: rgb(114, 245, 114);
   border: thick solid rgb(36, 53, 0);
 }
 
 .button-top-right {
   border-radius: 0 100% 0 0;
   margin: 20px 20px 0 0;
-  background-color: rgb(193, 167, 167);
-  border: thick solid rgb(219, 0, 131);
+  background-color: rgb(247, 134, 134);
+  border: thick solid rgb(83, 12, 12);
 }
 
 .button-bottom-left {
   border-radius: 0 0 0 100%;
   margin: 0 0 20px 20px;
-  background-color: yellow;
+  background-color: rgb(231, 231, 112);
   border: thick solid rgb(130, 124, 13);
 }
 
 .button-bottom-right {
-  border-radius: 0 0 50% 0;
+  border-radius: 0 0 100% 0;
   margin: 0 20px 20px 0;
-  background-color: rgb(2, 2, 15);
+  background-color: rgb(125, 125, 248);
   border: thick solid rgb(27, 14, 100);
 }
 
 .controls {
   position: absolute;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background-color: rgb(255, 255, 255);
-  padding: 2em;
+  width: 250px;
+  height: 250px;
+  background-color: #222;
+  padding: 2.5em;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: columb;
-}
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
 
 .game-name {
   font-size: 2em;
@@ -125,21 +140,25 @@ footer a {
 .score {
   position: absolute;
   text-align: center;
-  font-size: 20px;
-  font-family: monospace;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: white;
   cursor: default;
-  width: 50px;
-  height: 20px;
-  border-radius: 30px;
-  border: solid thin rgb(117, 0, 0);
-  background-color: #300;
+  width: 80px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: linear-gradient(135deg, #f45c43, #ea2d4e);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 0.5em;
+  line-height: 1.4;
 }
 
+
 .center {
-  top: 80%;
-  left: 70%;
+  top: 50%;
+  left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
